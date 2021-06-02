@@ -1,0 +1,23 @@
+
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+span{
+    font-size: 1rem;
+}
+.bold{
+    font-weight: bold;
+}
