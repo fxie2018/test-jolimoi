@@ -25,6 +25,9 @@
             <div v-else-if="emptyResult" id="noResult">
                no result
             </div>
+            <div v-else-if="error" id="errorSearch">
+                error!
+            </div>
         </el-row>
     </section>
 
@@ -36,7 +39,8 @@
             return{
                 searchContent:"",
                 result:[],
-                emptyResult:false
+                emptyResult:false,
+                error:false
             }
         },
         methods:{
@@ -49,7 +53,10 @@
                             this.emptyResult = true;
                         }
                     })
-                    .catch(e => e)
+                    .catch(e => {
+                        this.error = true;
+                        console.log(e);
+                    })
             }
         },
         computed:{
@@ -65,7 +72,7 @@
     #search{
         margin-top:50px;
     }
-    #searchResult,#noResult{
+    #searchResult,#noResult,#errorSearch{
         margin-top:20px;
         color:#ffffff;
         padding:0 50px;
